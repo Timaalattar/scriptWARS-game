@@ -1,0 +1,36 @@
+body {
+    background-color: lightblue;
+}
+.main-container {
+    border: 5px solid red;
+    display: flex;
+    justify-content: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 48px;
+    color: #CC252C
+
+}
+
+.second-container {
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container {
+    border: 5px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-container {
+    border: 5px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-container {
+    border: 5px solid red;
+    display: flex;
+    justify-content: space-between;
+}
