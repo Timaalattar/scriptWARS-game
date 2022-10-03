@@ -1,49 +1,121 @@
 body {
-    background-color: lightblue;
+    background-color: #87CEEB;
 }
 .main-container {
     display: flex;
     justify-content: center;
     font-family: 'Permanent Marker', cursive;
     font-size: 48px;
-    color: #CC252C;
+    color: #EE4B2B;
     height: 35vh;
 
 }
 
 .second-container {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     height: 75vh;
 }
 
 .left-container {
-    padding-top: 250px;
+    padding-top: 350px;
     text-align: center;
     width: 25%;
     font-family: 'Manrope', sans-serif;
-    font-size: 18px;
+}
+
+#player1 {
+    font-weight: 900;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+#score-1 {
     font-weight: 400;
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+}
+
+#player1-score {
+    font-weight: 900;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
 }
 
 .center-container {
+    width: 50%;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
 }
 
 .game-container {
-    width: 100%;
     display: flex;
     background-color: white;
     border-radius: 30px;
-    justify-content: center;
+    justify-content:space-evenly;
+    flex-direction: column;
+    height: 500px;
 }
 
+.instruction-text, {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 900
+}
+
+.game-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.button-start {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.game-start {
+    justify-content: center;
+    display: none;
+}
+
+.answers {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    width: 80px;
+    display: flex;
+}
+
+.button-submit {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    width: 200px;
+    display: flex;
+}
 
 .right-container {
-    padding-top: 250px;
+    padding-top: 350px;
     text-align: center;
     width: 25%;
     font-family: 'Manrope', sans-serif;
@@ -56,4 +128,25 @@ body {
     display: flex;
     justify-content: center;
     padding-left: 5px;
+}
+
+#player2 {
+    font-weight: 900;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+#score-2 {
+    font-weight: 400;
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+}
+
+#player2-score {
+    font-weight: 900;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
 }

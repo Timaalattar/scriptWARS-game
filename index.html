@@ -22,28 +22,39 @@
     <br><br/>
     <div class="second-container">
         <div class="left-container">
-            <p>Player 1</p>
-            <p>Score</p>
-            <p>0</p>
+            <p ID="player1">Player 1</p>
+            <p ID="score-1">Score</p>
+            <p ID="player1-score">0</p>
         </div>
         <div class="center-container">
             <div class="game-container">
-                <p>Center Container</p>
+                <h2 class="instruction-text">Instructions</h2>
+                <p class="game-text"> 1. Players take turns consecutively answering questions 
+                    2. Each correct answer gains the player 1 point 
+                    3. While each wrong answer, gives the oppourtunity to the next player to earn an extra point 
+                    4. first player to get 5 points wins!
+                  </p>
+                <button id="button-start" onclick="myFunction_start()">Start game</button>
+                <div class="game-start">
+                    <input type="text" id="answers" name="answers">
+                    <button class="button-submit">submit</button>
+                </div>
             </div>
-        
+        </div>
+
         <div class="right-container">
-            <p>Player 2</p>
-            <p>Score</p>
+            <p ID="player2">Player 2</p>
+            <p ID="score-2">Score</p>
             <p ID="player2-score">0</p>
         </div>
     </div>
     </div>
     <br><br/>
     <div class="button-container">
-        <div class="button1">
+        <div class="button-new">
         <button>New game</button>
         </div>            
-        <div class="button2">
+        <div class="button-restart">
         <button>Restart</button>
         </div>
     </div>
