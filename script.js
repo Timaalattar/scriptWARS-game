@@ -96,15 +96,41 @@ function changeTurn(){
     playerTwoturn = !playerTwoturn
     if(playerOneturn){
         document.getElementById("instruction-text").innerText = 'Player 1 turn';
+        document.getElementById('answer').value = '';
     } else {
         document.getElementById("instruction-text").innerText = 'Player 2 turn';
+        document.getElementById('answer').value = '';
     }
     randomize(questionsAndAnswers)
 }
 
+//if condition to check score and annouce winner 
 
+let playerScore= document.getElementById('button-submit')
+playerScore.addEventListener("click", checkScore)
+function checkScore() {
+     if(playerOneScore>=5){
+     document.getElementById("instruction-text").innerText = 'Player one wins';
+     document.getElementById("game-start").style.display = 'none';
+     document.getElementById("game-text").style.display = 'none';
 
+     } else if(playerTwoScore>=5) {
+        document.getElementById("instruction-text").innerText = 'Player Two wins';
+        document.getElementById("game-start").style.display = 'none';
+        document.getElementById("game-text").style.display = 'none';
+        }
+}
 
+//Resent button
+
+let resetButton = document.getElementById('button-restart')
+resetButton.addEventListener("click", restartGame)
+function restartGame() {
+    
+    document.getElementById('player1-score').value = '';
+    document.getElementById('player1-score').value = '';
+    randomize(questionsAndAnswers)
+}
 
 
 
