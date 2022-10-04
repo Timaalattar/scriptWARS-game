@@ -33,9 +33,9 @@ let questionsAndAnswers = [
 
   let randomQuestion
   
-  function randomize(){
-    randomQuestion = Math.floor(Math.random() * Array.length)
-    document.getElementById("game-text").innerHTML = questionsAndAnswers[randomQuestion].question;
+  function randomize(arr){
+    randomQuestion = Math.floor(Math.random() * arr.length)
+    document.getElementById("game-text").innerText = questionsAndAnswers[randomQuestion].question;
   }
 
 //creating a function that randomizes the questions in the array, doing it in the form of a function because we need to use it when the start game button is clicked and when the submit button is clicked
@@ -46,11 +46,11 @@ let questionsAndAnswers = [
     buttonStart.addEventListener('click', myFunction_start)
 
 function myFunction_start() {
-    randomize()
+    randomize(questionsAndAnswers)
     document.getElementById("button-start").style.display = 'none'; 
     document.getElementById("game-start").style.display = 'flex'; 
     document.getElementById("game-start").style.justifyContent = 'center';
-    document.getElementById("instruction-text").innerHTML = 'Player 1 turn'; 
+    document.getElementById("instruction-text").innerText = 'Player 1 turn'; 
 }
 
 // next I need to code the game function after the loading/starting the game
@@ -99,28 +99,14 @@ function changeTurn(){
     } else {
         document.getElementById("instruction-text").innerText = 'Player 2 turn';
     }
-    randomize()
+    randomize(questionsAndAnswers)
 }
 
 
-// //fuction for player one when question is correct
-
-// //function to define what the correct answer should be 
-// .addEventListener('input', answerQuestion)
-
-// function answerQuestion(event) {
-// }
 
 
 
 
-// //function for player two when question is correct 
-// function playerTwocorrect() {
-//     randomize()
-//     document.getElementById("player1-score").innerHTML = playerOneScore + 1;  
-//     document.getElementById("instruction-text").innerHTML = 'Player 2 turn'; 
-//     document.getElementById("game-text").innerHTML = questionsAndAnswers[randomQuestion].question;
-// }
 
 
 
