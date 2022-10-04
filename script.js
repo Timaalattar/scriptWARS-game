@@ -35,6 +35,7 @@ let questionsAndAnswers = [
   
   function randomize(){
     randomQuestion = Math.floor(Math.random() * Array.length)
+    document.getElementById("game-text").innerHTML = questionsAndAnswers[randomQuestion].question;
   }
 
 //creating a function that randomizes the questions in the array, doing it in the form of a function because we need to use it when the start game button is clicked and when the submit button is clicked
@@ -50,7 +51,6 @@ function myFunction_start() {
     document.getElementById("game-start").style.display = 'flex'; 
     document.getElementById("game-start").style.justifyContent = 'center';
     document.getElementById("instruction-text").innerHTML = 'Player 1 turn'; 
-    document.getElementById("game-text").innerHTML = questionsAndAnswers[randomQuestion].question;
 }
 
 // next I need to code the game function after the loading/starting the game
@@ -60,21 +60,69 @@ function myFunction_start() {
 // - if player 2 answers the question correctly then their score has to be updated and then they go again for their turn 
 // if the answer is wrong then we have to show the question and have a button to click to for the next question, but it will still be player 2 turn
 
-let userAnswer = document.querySelector('answers').addEventListener('input', answerQuestion)
 
-function answerQuestion(event) {
-  let answer = questionsAndAnswers[randomQuestion].answer
-  let playerOneScore = 0 
-  let playerTwoScore = 0
-  if (userAnswer == answer) {
-    function myFunction_player() {
-        document.getElementById("player1-score").innerHTML = playerOneScore + 1; 
-        document.getElementById("new-question").style.display = 'flex'; 
-        document.getElementById("new-question").style.justifyContent = 'center';
-  } else {
-    if (userAnswer !== answer) {
-        function myFunction_nextplayer() {
-            document.getElementById("player1-score").innerHTML = 'Player 1 turn'; 
-  }
-  }
+//simplifying the function and making it one answer and gets point and moves on defining variables 
+let playerOneturn = true
+let playerTwoturn = false
+let playerOneScore = 0 
+let playerTwoScore = 0
+
+
+//select submit button
+let submitBtn = document.getElementById('button-submit')
+submitBtn.addEventListener("click", checkInput)
+function updateScore() {
+    if(playerOneturn){
+        playerOneScore++
+        document.getElementById("player1-score").innerText = playerOneScore;  
+    } else {
+        playerTwoScore++
+        document.getElementById("player2-score").innerText = playerTwoScore;  
+    }
 }
+
+function checkInput(taco){
+    let userAnswer = document.querySelector('#answer').value
+    let correctAnswer = questionsAndAnswers[randomQuestion].answer
+    if (userAnswer === correctAnswer) {
+        console.log('correct!')
+        updateScore()
+    }
+    changeTurn()
+}
+
+function changeTurn(){
+    playerOneturn = !playerOneturn
+    playerTwoturn = !playerTwoturn
+    if(playerOneturn){
+        document.getElementById("instruction-text").innerText = 'Player 1 turn';
+    } else {
+        document.getElementById("instruction-text").innerText = 'Player 2 turn';
+    }
+    randomize()
+}
+
+
+// //fuction for player one when question is correct
+
+// //function to define what the correct answer should be 
+// .addEventListener('input', answerQuestion)
+
+// function answerQuestion(event) {
+// }
+
+
+
+
+// //function for player two when question is correct 
+// function playerTwocorrect() {
+//     randomize()
+//     document.getElementById("player1-score").innerHTML = playerOneScore + 1;  
+//     document.getElementById("instruction-text").innerHTML = 'Player 2 turn'; 
+//     document.getElementById("game-text").innerHTML = questionsAndAnswers[randomQuestion].question;
+// }
+
+
+
+
+
