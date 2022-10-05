@@ -126,8 +126,8 @@ function checkScore() {
 let resetButton = document.getElementById('button-restart')
 resetButton.addEventListener("click", restartGame)
 function restartGame() {   
-    // document.getElementById('player1-score').value = '';
-    // document.getElementById('player2-score').value = '';
+    document.getElementById('player1-score').value = '';
+    document.getElementById('player2-score').value = '';
 }
 
 
