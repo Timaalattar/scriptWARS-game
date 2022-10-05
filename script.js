@@ -121,13 +121,29 @@ function checkScore() {
         }
 }
 
-//Reset button
+//Reset button - my failed attempt
 
-let resetButton = document.getElementById('button-restart')
-resetButton.addEventListener("click", restartGame)
-function restartGame() {   
-    document.getElementById('player1-score').value = '';
-    document.getElementById('player2-score').value = '';
+// let resetButton = document.getElementById('button-restart')
+// resetButton.addEventListener("click", restartGame)
+// function restartGame() {   
+//     document.getElementById('player1-score').value = '';
+//     document.getElementById('player2-score').value = '';
+// }
+
+//Reset button - alex suggestion 
+
+const resetButton = document.getElementById('button-restart');
+resetButton.addEventListener('click', resetGame);
+
+function resetGame() {
+    playerOneScore = 0;
+    playerTwoScore = 0;
+    document.getElementById('player1-score').innerText = playerOneScore;
+    document.getElementById('player2-score').innerText = playerTwoScore;
+    document.getElementById("instruction-text").innerText = 'Player 1 turn';
+    document.getElementById("game-start").style.display = 'flex';
+    document.getElementById("game-text").style.display = 'flex';
+    randomize(questionsAndAnswers)
 }
 
 
