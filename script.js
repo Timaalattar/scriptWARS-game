@@ -121,15 +121,13 @@ function checkScore() {
         }
 }
 
-//Resent button
+//Reset button
 
 let resetButton = document.getElementById('button-restart')
 resetButton.addEventListener("click", restartGame)
-function restartGame() {
-    
-    document.getElementById('player1-score').value = '';
-    document.getElementById('player1-score').value = '';
-    randomize(questionsAndAnswers)
+function restartGame() {   
+    // document.getElementById('player1-score').value = '';
+    // document.getElementById('player2-score').value = '';
 }
 
 
