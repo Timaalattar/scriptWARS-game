@@ -10,24 +10,45 @@
 
 let questionsAndAnswers = [
     {
-      question: 'What is my name',
-      answer: 'Tima'
+      question: 'name the data types for true and false values ',
+      answer: 'boolean'
     },
     {
-      question: 'What is my age',
-      answer: '33'
+      question: 'name the data types for variables that are only declared and not defined or initialized,
+      answer: 'undefined'
     },
     {
-      question: 'what is my favorite color',
-      answer: 'orange'
+      question: 'name the data types for integer and floating-point numbers',
+      answer: 'number '
     },
     {
-      question: 'What is my favorite food',
-      answer: 'sushi'
+      question: 'name the data types for characters and alphanumeric values',
+      answer: 'string '
     },
     {
-      question: 'What is my favorite number',
-      answer: '10'
+      question: 'name the data types for collections or complex values',
+      answer: 'object '
+    },
+
+    {
+      question: 'name the data types for unique identifier for objects',
+      answer: 'symbols '
+    },
+    {
+      question: 'Built-in methods in javaScript that returns the present data and time',
+      answer: 'date()'
+    },
+    {
+      question: 'Built-in methods in javaScript that adds an item to an array',
+      answer: 'push()'
+    },
+    {
+      question: 'Built-in methods in javaScript that removes and also returns the last element of an array',
+      answer: 'pop()'
+    },
+    {
+      question: 'Built-in methods in javaScript that returns the length of a string',
+      answer: 'length()'
     },
   ] 
 
