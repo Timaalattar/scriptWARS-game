@@ -36,6 +36,7 @@ let questionsAndAnswers = [
   function randomize(arr){
     randomQuestion = Math.floor(Math.random() * arr.length)
     document.getElementById("game-text").innerText = questionsAndAnswers[randomQuestion].question;
+    document.getElementById("game-text").style.paddingLeft = '75px';
   }
 
 //creating a function that randomizes the questions in the array, doing it in the form of a function because we need to use it when the start game button is clicked and when the submit button is clicked
@@ -51,8 +52,8 @@ function myFunction_start() {
     document.getElementById("game-start").style.display = 'flex'; 
     document.getElementById("game-start").style.justifyContent = 'center';
     document.getElementById("instruction-text").innerText = 'Player 1 turn'; 
-}
-
+    document.getElementById("instructions").style.display = 'none';    
+  } 
 // next I need to code the game function after the loading/starting the game
 // - after questions appears it is player 1's turn to start they have to be able to type the answer in the input box and press submit
 // - if the question is right then player's score is to be updated with 1 point
@@ -140,10 +141,9 @@ function resetGame() {
     playerTwoScore = 0;
     document.getElementById('player1-score').innerText = playerOneScore;
     document.getElementById('player2-score').innerText = playerTwoScore;
-    document.getElementById("instruction-text").innerText = 'Player 1 turn';
-    document.getElementById("game-start").style.display = 'flex';
-    document.getElementById("game-text").style.display = 'flex';
-    randomize(questionsAndAnswers)
+    document.getElementById("button-start").style.display = 'flex';
+    document.getElementById("game-start").style.display = 'none';
+    document.getElementById("game-text").innerText = ''; 
 }
 
 
