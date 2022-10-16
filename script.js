@@ -14,41 +14,41 @@ let questionsAndAnswers = [
       answer: 'boolean'
     },
     {
-      question: 'name the data types for variables that are only declared and not defined or initialized,
+      question: 'name the data types for variables that are only declared and not defined or initialized',
       answer: 'undefined'
     },
     {
       question: 'name the data types for integer and floating-point numbers',
-      answer: 'number '
+      answer: 'number'
     },
     {
       question: 'name the data types for characters and alphanumeric values',
-      answer: 'string '
+      answer: 'string'
     },
     {
       question: 'name the data types for collections or complex values',
-      answer: 'object '
+      answer: 'object'
     },
 
     {
       question: 'name the data types for unique identifier for objects',
-      answer: 'symbols '
+      answer: 'symbols'
     },
     {
       question: 'Built-in methods in javaScript that returns the present data and time',
-      answer: 'date()'
+      answer: 'date'
     },
     {
       question: 'Built-in methods in javaScript that adds an item to an array',
-      answer: 'push()'
+      answer: 'push'
     },
     {
       question: 'Built-in methods in javaScript that removes and also returns the last element of an array',
-      answer: 'pop()'
+      answer: 'pop'
     },
     {
       question: 'Built-in methods in javaScript that returns the length of a string',
-      answer: 'length()'
+      answer: 'length'
     },
   ] 
 
